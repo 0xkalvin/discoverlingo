@@ -1,9 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "settings.c"
 
-#define MAX_LEN 280
+void sort_letter_array(Letter array[], int size){
+    int min;
+    for(int i = 0; i < size; i++){
+        min = i;
+        for(int j = i + 1; j < size; j++){
+            if(array[min].q < array[j].q){
+                min = j;
+            }
+        }
+        Letter temp = array[min];
+        array[min] = array[i];
+        array[i] = temp;
+    }
+}
 
 
 
@@ -22,6 +32,8 @@ Letter *all_letters_frequency(char string[MAX_LEN]){
         }
         i++;
     }
+
+    sort_letter_array(letters_frequency, 26);
 
    return letters_frequency;
 }

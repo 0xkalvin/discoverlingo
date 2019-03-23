@@ -20,8 +20,11 @@ o = 7.507
 i = 6.966
 
 */
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#define MAX_LEN 280
 
 char portuguese[5] = {'a', 'e', 'o', 's', 'r'};
 char english[5] = {'e', 't', 'a', 'o', 'i'};
