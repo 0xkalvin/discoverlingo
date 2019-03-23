@@ -36,3 +36,8 @@ typedef struct Letter{
     char l;
     int q;
 } Letter;
+
+typedef struct Language{
+    Letter *letters;
+    
+} Language;

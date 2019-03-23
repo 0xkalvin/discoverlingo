@@ -8,7 +8,7 @@ void find_language(char text[MAX_LEN]){
     //printf("%s", result);
 
     Letter *letters_frequency = all_letters_frequency(text);
-    print_frequency(letters_frequency);
+    print_letter_array(letters_frequency);
 }
 
 int main(){
