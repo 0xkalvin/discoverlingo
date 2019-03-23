@@ -1,4 +1,4 @@
-#include "settings.c"
+#include "config.c"
 
 void sort_letter_array(Letter array[], int total_letters){
     int min;
