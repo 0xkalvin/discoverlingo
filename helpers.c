@@ -15,18 +15,6 @@ void sort_letter_array(Letter array[], int total_letters){
     }
 }
 
-// Letter *remove_zeros(Letter array[], int total_letters){
-//     Letter *r;
-//     int counter = 0;
-//     for(int i = 0; i < total_letters; i++) if(array[i].q == 0) counter++; 
-//     r = (Letter*)malloc(counter*sizeof(Letter));
-//     for(int i = 0; i < total_letters; i++) if(array[i].q!=0) r[i] = array[i];
-    
-//     return r;
-// }
-
-
-
 Letter *all_letters_frequency(char string[MAX_LEN]){
     int i = 0;
     int total_letters = 26;
@@ -55,6 +43,25 @@ void print_letter_array(Letter *letters_frequency){
         printf(" %c = %d \n",letters_frequency[i].l , letters_frequency[i].q);
     }
 }
+
+int number_of_valid_char(char string[MAX_LEN]){
+    int n = 0;
+    int i = 0;
+    while(string[i] != '\0'){ 
+        if(string[i] != ' ') n++;
+        i++;
+    }
+    return n-1;
+}
+
+double *letter_percentual(Letter *letters_frequency, int num_of_letters){
+    double *percentuals = malloc(num_of_letters*sizeof(double));
+    for(int i = 0; i < num_of_letters; i++){
+        percentuals[i] = (double)letters_frequency[i].q/num_of_letters*100;
+    }
+    return percentuals;
+}
+
 
 
 // Language *language_sorted_by_five_most_frequent_letters(int w){
