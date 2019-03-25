@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #define MAX_LEN 280
 
 const char portuguese_letters[10] = {'a', 'e', 'o', 's', 'r', 'i', 'n', 'd', 'm', 'u'};

@@ -4,9 +4,10 @@ int main(){
 
     char text[MAX_LEN];
 
-    printf("Write some message:\n");
+    printf("Write a message :\n");
     if(fgets(text, sizeof(text), stdin)){
-        find_language(text);
+        if(is_valid(text))find_language(text);
+        else printf("\nInvalid text size\n");
     }
 
     return 0;

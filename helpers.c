@@ -62,6 +62,9 @@ double *letter_percentual(Letter *letters_frequency, int num_of_letters){
     return percentuals;
 }
 
+bool is_valid(char string[MAX_LEN]){
+    return (number_of_valid_char(string) > 10 && number_of_valid_char(string) < 280) ? true : false;    
+}
 
 
 // Language *language_sorted_by_five_most_frequent_letters(int w){
