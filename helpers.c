@@ -63,7 +63,7 @@ double *letter_percentual(Letter *letters_frequency, int num_of_letters){
 }
 
 bool is_valid(char string[MAX_LEN]){
-    return (number_of_valid_char(string) > 10 && number_of_valid_char(string) < 280) ? true : false;    
+    return (number_of_valid_char(string) > 9 && number_of_valid_char(string) < 281) ? true : false;    
 }
 
 
