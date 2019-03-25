@@ -21,11 +21,11 @@ void find_language(char text[MAX_LEN]){
 
     if(letters_frequency[0].l == 'a'){
         strcat(result, "portuguese!");
-        printf("%s \n", result);
+        printf("%s \n\n", result);
     }
     else{
         strcat(result, "english!");
-        printf("%s \n", result);
+        printf("%s \n\n", result);
     }
 
 }
