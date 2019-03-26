@@ -18,26 +18,72 @@ void find_language(char text[MAX_LEN]){
     // for(int i = 0; i < num_of_chars; i++) printf(" %4c ", letters_frequency[i].l );
     // printf("\nKKKKKKK %c", portuguese_letters[1]);
 
-    int p = 0;
-    int e = 0;
-    int g = 0;
+    double p = 0;
+    double e = 0;
+    double g = 0;
+
 
     // EACH LETTER WILL HAVE A COEFICIENT MEANING ITS FREQUENCY FOR A SPECIFIED LANGUAGE
     // LANGUAGE  
-    for(int i = 0; i < 10; i++){
-        if(letters_frequency[i].l == 'a' || letters_frequency[i].l == 'e' || letters_frequency[i].l == 'o'
-        || letters_frequency[i].l == 's' || letters_frequency[i].l == 'r')
-        {
-
+    for(int i = 0; i < 26; i++){
+        if(letters_frequency[i].l == 'a'){
+            p += 14.63;
+            e += 8.167;
         }
-        else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 't' || letters_frequency[i].l == 'a'
-        || letters_frequency[i].l == 'o' || letters_frequency[i].l == 'i')
-        {
-
+        else if(letters_frequency[i].l == 'b'){
+            p += 1.04;
+            e += 1.492;
+        }
+        else if(letters_frequency[i].l == 'c'){
+            p += 3.88;
+            e += 2.782;
+        }
+        else if(letters_frequency[i].l == 'd'){
+            p += 4.99;
+            e += 4.253;
+        }
+        else if(letters_frequency[i].l == 'e'){
+            p += 12.57;
+            e += 12.702;
+        }
+        else if(letters_frequency[i].l == 'f'){
+            p += 1.02;
+            e += 2.228;
+        }
+        else if(letters_frequency[i].l == 'g'){
+            p += 1.30;
+            e += 2.015;
+        }
+        else if(letters_frequency[i].l == 'h'){
+            p += 6.094;
+            e += 1.28;
+        }
+        else if(letters_frequency[i].l == 'i'){
+            p += 6.18;
+            e += 6.966;
+        }
+        else if(letters_frequency[i].l == 'j'){
+            p += 0.4;
+            e += 0.153;
+        }
+        else if(letters_frequency[i].l == 'k'){
+            p += 0.02;
+            e += 0.772;
+        }
+        else if(letters_frequency[i].l == 'l'){
+            p += 2.78;
+            e += 4.025;
+        }
+        else if(letters_frequency[i].l == 'm'){
+            p += 4.74;
+            e += 2.406;
+        }
+        else if(letters_frequency[i].l == 'n'){
+            p += 1.04;
+            e += 6.749;
         }
     }
-
-    if(letters_frequency[0].l == 'a'){
+    if(p > e){
         strcat(result, "portuguese!");
         printf("%s \n\n", result);
     }

@@ -32,7 +32,7 @@ Letter *all_letters_frequency(char string[MAX_LEN]){
         i++;
     }
 
-    sort_letter_array(letters_frequency, total_letters);
+    //sort_letter_array(letters_frequency, total_letters);
 
     return letters_frequency;
 }
