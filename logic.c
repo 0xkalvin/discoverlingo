@@ -18,6 +18,24 @@ void find_language(char text[MAX_LEN]){
     // for(int i = 0; i < num_of_chars; i++) printf(" %4c ", letters_frequency[i].l );
     // printf("\nKKKKKKK %c", portuguese_letters[1]);
 
+    int p = 0;
+    int e = 0;
+    int g = 0;
+
+    // EACH LETTER WILL HAVE A COEFICIENT MEANING ITS FREQUENCY FOR A SPECIFIED LANGUAGE
+    // LANGUAGE  
+    for(int i = 0; i < 10; i++){
+        if(letters_frequency[i].l == 'a' || letters_frequency[i].l == 'e' || letters_frequency[i].l == 'o'
+        || letters_frequency[i].l == 's' || letters_frequency[i].l == 'r')
+        {
+
+        }
+        else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 't' || letters_frequency[i].l == 'a'
+        || letters_frequency[i].l == 'o' || letters_frequency[i].l == 'i')
+        {
+
+        }
+    }
 
     if(letters_frequency[0].l == 'a'){
         strcat(result, "portuguese!");
