@@ -1,11 +1,5 @@
 #include "helpers.c"
 
-
-
-
-
-
-
 void find_language(char text[MAX_LEN]){
 
     char result[MAX_LEN] = "\n The language is ";
@@ -13,7 +7,6 @@ void find_language(char text[MAX_LEN]){
 
     Letter *letters_frequency = all_letters_frequency(text);
 
-    int size = strlen(text);
     int num_of_chars = number_of_valid_char(text);
     printf("\n the number of valid chars is %d \n", num_of_chars);
 

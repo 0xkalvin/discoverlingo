@@ -19,7 +19,7 @@ Letter *all_letters_frequency(char string[MAX_LEN]){
     int i = 0;
     int total_letters = 26;
     int letter_value = 0;
-    Letter *letters_frequency = malloc(total_letters*sizeof(int));
+    Letter *letters_frequency = malloc(total_letters*sizeof(Letter));
 
     for (int j = 0; j < total_letters; j++) letters_frequency[j].q = 0;
     for (int j = 0; j < total_letters; j++) letters_frequency[j].l = 'a' + j;
@@ -54,14 +54,14 @@ int number_of_valid_char(char string[MAX_LEN]){
     return n-1;
 }
 
-double *letter_percentual(Letter *letters_frequency, int num_of_letters){
-    double *percentuals = malloc(num_of_letters*sizeof(double));
-    for(int i = 0; i < num_of_letters; i++){
-        percentuals[i] = (double)letters_frequency[i].q/num_of_letters*100;
-    }
-    return percentuals;
-}
+// double *letter_percentual(Letter *letters_frequency, int num_of_letters){
+//     double *percentuals = malloc(num_of_letters*sizeof(double));
+//     for(int i = 0; i < num_of_letters; i++){
+//         percentuals[i] = (double)letters_frequency[i].q/num_of_letters*100;
+//     }
+//     return percentuals;
+// }
 
 bool is_valid(char string[MAX_LEN]){
-    return (number_of_valid_char(string) > 5 && number_of_valid_char(string) < 281) ? true : false;    
+    return (number_of_valid_char(string) > 4 && number_of_valid_char(string) < 281) ? true : false;    
 }
