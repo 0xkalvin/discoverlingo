@@ -1,5 +1,15 @@
 #include "logic.c"
 
+
+void test(){
+        double p = 0;
+        double x = 1;
+        p += 2;
+        printf(p == x ? "%f igual" : "%f diferente", p);
+}
+
+
+
 int main()
 {
 
