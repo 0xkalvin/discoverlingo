@@ -161,7 +161,9 @@ void find_language(char text[MAX_LEN]){
 
 
     // FOR BIG TEXT
-    if(num_of_chars > 20){
+    if(num_of_chars > 25){
+        sort_letter_array(letters_frequency, 26);
+        print_letter_array(letters_frequency);
         if(p > e && p > g){
             strcat(result, "portuguese!");
             printf("%s \n\n", result);
@@ -184,40 +186,24 @@ void find_language(char text[MAX_LEN]){
         sort_letter_array(letters_frequency, 26);
         print_letter_array(letters_frequency);
 
-        for(int i = 0; i < 2;  i++){
-            if(letters_frequency[i].l == 'a' || letters_frequency[i].l == 'e') por_counter+=letters_frequency[i].q;
-            else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 't') eng_counter+=letters_frequency[i].q;
-            else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 'n') ger_counter+=letters_frequency[i].q; 
+        for(int i = 0; i < 5;  i++){
+            if(letters_frequency[i].l == 'a' || letters_frequency[i].l == 'e' || letters_frequency[i].l == 's') por_counter+=letters_frequency[i].q;
+            else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 't' || letters_frequency[i].l == 'i') eng_counter+=letters_frequency[i].q;
+            else if(letters_frequency[i].l == 'e' || letters_frequency[i].l == 'n' || letters_frequency[i].l == 'r') ger_counter+=letters_frequency[i].q; 
         }
-        if(por_counter > eng_counter && por_counter > ger_counter){
+        if((letters_frequency[0].l == 'a' || letters_frequency[1].l == 'a') && (por_counter > eng_counter && por_counter > ger_counter)){
             strcat(result, "portuguese!");
-            printf("%s \n\n", result);  
+            printf("%s \n\n", result);
         }
-        else if(eng_counter > por_counter && eng_counter > ger_counter){
-            strcat(result, "english!");
-            printf("%s \n\n", result);  
-        }
-        else{
+        else if((letters_frequency[0].l == 'n' || letters_frequency[1].l == 'n') && (ger_counter > eng_counter && ger_counter > por_counter)){
             strcat(result, "german!");
             printf("%s \n\n", result);
         }
+         else{
+            strcat(result, "english!");
+            printf("%s \n\n", result);  
+        }
 
     }
-
-   
-    // A e E portuguese
-    // E e T english
-    // if((p > e && p > g) || (por_counter > eng_counter && por_counter > ger_counter)){
-    //     strcat(result, "portuguese!");
-    //     printf("%s \n\n", result);
-    // }
-    // else if ((e > p && e > g) || (eng_counter > por_counter && eng_counter > ger_counter)){
-    //     strcat(result, "english!");
-    //     printf("%s \n\n", result);
-    // }
-    // else{
-    //     strcat(result, "german!");
-    //     printf("%s \n\n", result);
-    // }
 
 }

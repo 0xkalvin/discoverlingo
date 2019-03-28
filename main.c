@@ -1,15 +1,6 @@
 #include "logic.c"
 
 
-void test(){
-        double a = 0;
-        double b = 3;
-        double c = 2;
-        printf(c > a && c > b ? "%f c maior" : "%f menor", c);
-}
-
-
-
 int main()
 {
 
@@ -20,7 +11,6 @@ int main()
         
         printf("\n ********   This program guesses what language you write in.  ********* \n\n");
         printf("Write a sentence (at least 10 and less than 280 characters:\n");
-        //test();
         if (fgets(text, sizeof(text), stdin))
         {
             if (is_valid(text)){
