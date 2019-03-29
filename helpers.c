@@ -54,14 +54,6 @@ int number_of_valid_char(char string[MAX_LEN]){
     return n-1;
 }
 
-// double *letter_percentual(Letter *letters_frequency, int num_of_letters){
-//     double *percentuals = malloc(num_of_letters*sizeof(double));
-//     for(int i = 0; i < num_of_letters; i++){
-//         percentuals[i] = (double)letters_frequency[i].q/num_of_letters*100;
-//     }
-//     return percentuals;
-// }
-
 bool is_valid(char string[MAX_LEN]){
     return (number_of_valid_char(string) > 4 && number_of_valid_char(string) < 281) ? true : false;    
 }
