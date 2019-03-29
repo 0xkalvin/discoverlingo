@@ -22,6 +22,10 @@ int main()
                 printf("\nERROR: Invalid text size!\n       It should be between 5 and 280.\n       Try again.  \n");
             }
         }
+        else{
+            system("clear");
+            printf("\nERROR: Invalid text size!\n       It cannot pass 280 characters.\n       Try again.  \n");
+        }
     }
 
     return 0;

@@ -157,11 +157,12 @@ void find_language(char text[MAX_LEN]){
     if(num_of_chars > 25){
         sort_letter_array(letters_frequency, 26);
         print_letter_array(letters_frequency);
-        if(p > e && p > g){
+    
+        if((p > e && p > g) && (letters_frequency[0].l == 'a' || letters_frequency[1].l == 'a' || letters_frequency[2].l == 'a')){
             strcat(result, "portuguese!");
             printf("%s \n\n", result);
         }
-        else if (e > p && e > g){
+        else if ((letters_frequency[0].l == 't' || letters_frequency[1].l == 't' || letters_frequency[2].l == 't')&&(e > p && e > g)){
             strcat(result, "english!");
             printf("%s \n\n", result);
         }
