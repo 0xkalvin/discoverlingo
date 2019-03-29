@@ -48,7 +48,9 @@ int number_of_valid_char(char string[MAX_LEN]){
     int n = 0;
     int i = 0;
     while(string[i] != '\0'){ 
-        if(string[i] != ' ') n++;
+        if(string[i] != ' ' && string[i] != '1' && string[i] != '2' && string[i] != '3'
+         && string[i] != '4' && string[i] != '5' && string[i] != '6' && string[i] != '7'
+         && string[i] != '8' && string[i] != '9' && string[i] != '0') n++;
         i++;
     }
     return n-1;
