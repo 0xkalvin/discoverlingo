@@ -183,7 +183,7 @@ void find_language(char text[MAX_LEN])
         strcat(result, "german!");
         printf("%s \n\n", result); 
     }
-    else if ((english > portuguese && english > german) || ((letters_frequency[0].letter == 't' || letters_frequency[1].letter == 't' || letters_frequency[2].letter == 't' || letters_frequency[3].letter == 't') && (letters_frequency[0].letter == 'e' || letters_frequency[1].letter == 'e' || letters_frequency[2].letter == 'e')))
+    else if ((english > portuguese && english > german) || ((letters_frequency[0].letter == 't' || letters_frequency[1].letter == 't' || letters_frequency[2].letter == 't' || letters_frequency[3].letter == 't' || letters_frequency[4].letter == 't') && (letters_frequency[0].letter == 'e' || letters_frequency[1].letter == 'e' || letters_frequency[2].letter == 'e')))
     {
         strcat(result, "english!");
         printf("%s \n\n", result);
