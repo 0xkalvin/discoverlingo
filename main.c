@@ -19,7 +19,7 @@ int main()
         printf("\n================     DISCOVERLINGO    ==============\n\n");
         printf("         This program guesses what language you write in.   \n\n");
         printf("   [ It only understand english, german and portuguese though! ] :)\n\n");
-        printf("Write a sentence (at least 30 characters) :\n");
+        printf("Write a sentence (at least 30 characters) :\n\n");
         if (fgets(text, sizeof(text), stdin))
         {
             if (is_valid(text)){
