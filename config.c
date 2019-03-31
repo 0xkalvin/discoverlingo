@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#define MAX_LEN 280
+#include <ctype.h>
+#define MAX_LEN 10000
 
 typedef struct Letter{
-    char l;
-    int q;
+    char letter;
+    int quantity;
 } Letter;
