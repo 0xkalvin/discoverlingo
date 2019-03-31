@@ -1,5 +1,10 @@
-#include "logic.c"
+/*
+    KALVIN VINICIUS 
+    ROGER ROJAS      
 
+*/
+
+#include "logic.c"
 
 int main()
 {
@@ -10,7 +15,7 @@ int main()
     {
         
         printf("\n ********   This program guesses what language you write in.  ********* \n\n");
-        printf("Write a sentence (at least 5 and less than 280 characters:\n");
+        printf("Write a sentence (at least 30 characters) :\n");
         if (fgets(text, sizeof(text), stdin))
         {
             if (is_valid(text)){
@@ -19,12 +24,8 @@ int main()
             }
             else{ 
                 system("clear");
-                printf("\nERROR: Invalid text size!\n       It should be between 5 and 280.\n       Try again.  \n");
+                printf("\nERROR: Invalid text size!\n       It should be between 30 and 10000.\n       Try again.  \n");
             }
-        }
-        else{
-            system("clear");
-            printf("\nERROR: Invalid text size!\n       It cannot pass 280 characters.\n       Try again.  \n");
         }
     }
 
