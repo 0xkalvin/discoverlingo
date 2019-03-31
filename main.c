@@ -4,7 +4,7 @@
 
 */
 
-#include "logic.c"
+#include "core.c"
 
 int main()
 {
