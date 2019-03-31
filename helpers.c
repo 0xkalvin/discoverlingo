@@ -1,6 +1,8 @@
 #include "config.c"
 
-int number_of_valid_char(char string[MAX_LEN]){
+// função para contar o número de caracteres válidos no texto inserido
+// números e espaços não são importantes para descobrir qual idioma é
+int number_of_chars(char string[MAX_LEN]){
     int n = 0;
     int i = 0;
     while(string[i] != '\0'){ 
@@ -12,10 +14,14 @@ int number_of_valid_char(char string[MAX_LEN]){
     return n-1;
 }
 
+// função que verifica se o texto inserido tem um tamanho válido
+// o tamanho deve ser até 10000 caracteres e pelo menos 30
+// considerei que o texto precisa de pelo menos 30 caracteres para se ter uma resposta razoável
 bool is_valid(char string[MAX_LEN]){
-    return (number_of_valid_char(string) > 29 && number_of_valid_char(string) < 10001) ? true : false;    
+    return (number_of_chars(string) > 29 && number_of_chars(string) < 10001) ? true : false;    
 }
 
+// função para printar o array de Letter
 void print_letter_array(Letter *letters_frequency){
     printf("\n");
     for(int i = 0; i < 26; i++){
@@ -23,6 +29,7 @@ void print_letter_array(Letter *letters_frequency){
     }
 }
 
+// função para ordenar o array de Letter por letras como maior quantidade
 void sort_letter_array(Letter array[], int num_of_letters){
     int min;
     for(int i = 0; i < num_of_letters; i++){
@@ -38,8 +45,8 @@ void sort_letter_array(Letter array[], int num_of_letters){
     }
 }
 
-
-
+// função que de fato cria o array de Letters
+// conta a quantidade de cada letra no texto inserido e adiciona no struct correspondente àquela letra
 Letter *all_letters_frequency(char string[MAX_LEN]){
     int i = 0;
     int num_of_letters = 26;
@@ -49,7 +56,7 @@ Letter *all_letters_frequency(char string[MAX_LEN]){
     for (int j = 0; j < num_of_letters; j++) letters_frequency[j].quantity = 0;
     for (int j = 0; j < num_of_letters; j++) letters_frequency[j].letter = 'a' + j;
 
-    for (int j = 0; j < number_of_valid_char(string); j++) string[j] = tolower(string[j]);
+    for (int j = 0; j < number_of_chars(string); j++) string[j] = tolower(string[j]);
 
     while(string[i] != '\0'){ 
         if(string[i] >= 'a' && string[i] <= 'z'){
