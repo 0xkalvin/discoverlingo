@@ -2,6 +2,9 @@
     KALVIN VASCONCELLOS 
     ROGER ROJAS      
 
+como testar o programa: rode o main.c na mesma pasta que os outros arquivos auxiliares usando um compilador de C.
+para mais informações, https://github.com/0xkalvin/discoverlingo
+
 */
 
 #include "core.c"
