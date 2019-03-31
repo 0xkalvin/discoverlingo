@@ -1,5 +1,5 @@
 /*
-    KALVIN VINICIUS 
+    KALVIN VASCONCELLOS 
     ROGER ROJAS      
 
 */
@@ -13,8 +13,9 @@ int main()
 
     while (true)
     {
-        
-        printf("\n ********   This program guesses what language you write in.  ********* \n\n");
+        printf("\n================     DISCOVERLINGO    ==============\n\n");
+        printf("         This program guesses what language you write in.   \n\n");
+        printf("   [ It only understand english, german and portuguese though! ] :)\n\n");
         printf("Write a sentence (at least 30 characters) :\n");
         if (fgets(text, sizeof(text), stdin))
         {
